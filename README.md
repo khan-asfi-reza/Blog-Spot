@@ -3,10 +3,11 @@
 ![alt Build Passing](https://github.com/khan-asfi-reza/Blog-Spot/workflows/Jekyll%20site%20CI/badge.svg)
 
 Tech Used:
-    1. HTML
-    2. CSS
-    3. Bootstrap 5
-    4. Font Awesome 5
+
+1. HTML
+2. CSS
+3. Bootstrap 5
+4. Font Awesome 5
 
 
 #### About Blog Spot
