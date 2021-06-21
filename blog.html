@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link href="./css/bs.min.css" rel="stylesheet" >
+    <script src="./js/bs.min.js" ></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="/Favicon/favicon.ico" type="image/x-icon">
+    <title>Blog Spot | Khan Asfi Reza</title>
+</head>
+<body class="theme-bg-dark">
+    <aside id="bcumb" class="breadcrumb theme-content-dark-bg bcumb-close">
+        <button id="bcumbCloseBtn" class="btn text-white close-btn">
+            &times;
+        </button>
+        <div>
+            <div class="d-flex justify-content-center align-items-center flex-column pro-pic-div">
+                <div class="image-container profile-pic-big">
+                    <img src="./images/reza.jpg" alt="Profile Picture">
+                </div>
+                <h5 class="text-white">Khan Asfi Reza</h5>
+            </div>
+            <div class="bcumb-menu mt-4">
+                <ul>
+                    <li class="active">
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fa fa-home me-2"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fas fa-hashtag me-2"></i> Trending
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fa fa-bell me-2"> </i>Notification 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fas fa-envelope me-2"></i> Messages
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fas fa-user me-2"></i> Followers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <header class="theme-content-dark-bg">
+        <div class="container d-flex justify-space-between align-items-center h-100">
+            <div class="d-flex align-items-center flex-2 nav-item-1">
+                <h1 class="text-white m-0 me-4">B</h2>
+                <div class="search-bar">
+                    <input id="searchBarInput" placeholder="Search blogs" type="text">
+                    <button id="searchBarBtn"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="flex-3 h-100 nav-item-2">
+                <ul class="w-75 m-auto nav-menu">
+                    <li class="active">
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fas fa-hashtag"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fa fa-bell">
+                            </i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./dashboard.html">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-2 d-flex justify-content-end nav-item-3">
+                <div class="d-flex align-items-center me-3">
+                    <div class="profile-pic image-container me-2">
+                        <img src="./images/reza.jpg" alt="">
+                    </div>
+                    <small class="text-white p-0 m-0">Khan Asfi Reza</small>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light btn-round" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="fas fa-cog me-3"></i> <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="fas fa-user me-3"></i> <span>Account</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="./index.html">
+                                <i class="fas fa-sign-out-alt me-3"></i> <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-1 expand-btn">
+                <button id="bcumbBtn" class="btn color-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container dashboard-main mt-4">
+        <section>
+            <article class="content-box theme-content-bg">
+                <div class="content-inner">
+                    <div class="d-flex justify-content-between align-items-md-center">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="profile-pic image-container me-2">
+                                <img src="./images/reza.jpg" alt="">
+                            </div>
+                            <h6 class="text-white m-0 me-1 mt-tab-1">Khan Asfi Reza</h6>
+                            <small class="color-text m-0 mt-tab-1">@khanasfireza | 1min</small>
+                        </div>
+                        <button class="btn text-white btn-more">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h4 class="text-white mt-3">So you think you should stop using React? Here’s why you’re wrong</h4>
+                    <p class="color-white">
+                        React was created and open-sourced in 2013 by Facebook based upon the idea of having a JavaScript library for building web applications. Since then, it has grown significantly.
+                        <br>
+                        But now, the competition has changed significantly, thanks to the introduction of new libraries or versions of Angular, Vue, and others — which raises the question: should we still build products with React in 2021?
+                        <br>
+                        Personally, I believe that React has a great future, and that you should start (or continue using) it in your projects. Here’s why.
+                        <br>
+                        <br>
+                        <h4 class="text-white">Building applications with React</h4><br>
+                        <ol class="color-white">
+                            <li>
+                               <b class="text-white">Development Efficiency :</b> The introduction of React questioned how we code web applications. It was a massive shift from what we knew and what the best practices were at the time. It told us not to separate HTML, CSS, and JS, for example. It also taught us to build more modular components and connect them to build complex applications, which was not very common on the web. This created a super efficient library that facilitates developers’ tasks in small or large projects, allowing quick turnarounds and delivering fast without compromising quality.
+                            </li><br>
+                            <li>
+                                <b class="text-white">Flexibility and maintainability :</b> The React mindset modularized the application in small, easy-to-maintain components that, when connected, sum up to a complex solution. As a result of this practice and by avoiding coupling components, React produces maintainable and scalable applications.
+                            </li><br>
+                            <li>
+                                <b class="text-white">Great for scalable prototypes :</b> Because of its moldability and fast development times, React makes up for an excellent choice to build your prototypes and MVPs. It allows you to produce quick results without sacrificing the scalability of the final product.
+                            </li><br>
+                            <li>
+                                <b class="text-white">Performance :</b> Last but not least, React is fast! Though questioned in some articles, React is a fast library, and it offers tools and methods for developers to fine-tune their components. I’m not saying React is the most rapid library/framework for every use-case, but it is a very efficient solution for most. Here’s a comparison of benchmarks for many different frameworks and libraries for performing the same operations. You can select React, React with Hooks and Vue, Angular, or many others to compare them.
+                            </li><br>
+                            <li>
+                                <b class="text-white">React Native: </b>React Native allows for the creation of native mobile applications using React. It is essential to understand that a web React application is different from a React Native application, and thus the code will differ. However, the transition from one to the other is easier than going for other native solutions.
+                            </li><br>
+                            <li>
+                                <b class="text-white">Availability of Resources: </b>Any company that has been hiring developers knows how hard it is to attract talent. Specialized technologies require specialized skills that can be very hard to find. Utilizing popular tools in the job marketplace can be easy with this task, as many resources are available or can be trained on. As one of the most popular front-end skills today, many schools, websites, code camps are producing React developers every day, filling in the gap. Additionally, many skilled React developers are already in the market, and many more want to transition. React is still a hot technology right now, so developers want to jump in.
+                            </li><br>
+                        </ol>
+                    </p>
+                    <div class="image-container">
+                        <img src="./images/performance.avif" alt="">
+                    </div>
+                    <br>
+                    <br>
+                    <h4 class="text-white">React for developers</h4><br>
+                    <p class="color-white">
+                        <span class="color-white">So far, we covered some of the elements that make React an excellent choice from a product perspective, but what does React mean for web developers?</span><br>
+                        <ol class="color-white">
+                            <li>
+                                <b class="text-white">Technology developers can love:</b> Developers are people with a great passion for what they do, and thus they are selective about the tools they use and what they like to build. Fortunately for React, the developer community loves the library, and in outstanding numbers. StackOverflow has proved this year after year by conducting its annual survey.
+                            </li>
+                            <li>
+                                <b class="text-white">Job opportunities: </b> Being the most popular and favorite framework out there should tell you a lot, but if you need confirmation that React is not only loved by developers but also by companies, try a simple LinkedIn Search for ReactJS, VueJS, Angular, and any other of the frameworks. I’ve compiled the following chart that indicates the number of job openings worldwide for each framework, right now, from LinkedIn. Notice the demand for React?
+                            </li>
+                        </ol>
+                    </p>
+
+
+                    <div class="mt-3">
+                        <button class="btn btn-emo text-danger me-3">
+                            <i class="far fa-heart"></i> 15.5k
+                        </button>
+                        <button class="btn btn-emo theme-color me-3">
+                            <i class="fas fa-share"></i> 11.2k
+                        </button>
+                        <button class="btn btn-emo text-success me-3">
+                            <i class="fas fa-comment-dots"></i> 12.2k
+                        </button>
+                        
+                    </div>
+                </div>
+            </article>
+            <h4 class="theme-color mt-4">Replies</h4>
+            <div class="mt-3 theme-content-bg content-box">
+                <div class="content-inner">
+                    <div class="d-flex align-items-center input-section s-1">
+                        <div class="image-container profile-pic-big me-2">
+                            <img src="./images/reza.jpg" alt="">
+                        </div>
+                        <h6 class="text-white">Khan Asfi Reza</h4>
+                    </div>
+                    <div class="comment-input mt-3 w-100">
+                        <input type="text" placeholder="Add Your Comment">
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-theme btn-rounded">Comment <i class="far fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 theme-content-bg content-box">
+                <div class="content-inner">
+                    <div class="d-flex align-items-center input-section s-1">
+                        <div class="image-container profile-pic-big me-2">
+                            <img src="./images/ronaldo.jpg" alt="">
+                        </div>
+                        <h6 class="text-white">Ronaldo</h4>
+                    </div>
+                    <p class="color-text mt-3">
+                       Very well, keep it up, buddy. And visit my home we have gift for you
+                    </p>
+                    <div class="mt-3">
+                        <button class="btn btn-emo text-danger me-3">
+                            <i class="far fa-heart"></i> 5.5k
+                        </button>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 theme-content-bg content-box">
+                <div class="content-inner">
+                    <div class="d-flex align-items-center input-section s-1">
+                        <div class="image-container profile-pic-big me-2">
+                            <img src="./images/person.png" alt="">
+                        </div>
+                        <h6 class="text-white">me. Anim</h4>
+                    </div>
+                    <p class="color-text mt-3">
+                        Very nice blog, well done, Take my love, But I want to ask why would you choose react over angular
+                    </p>
+                    <div class="mt-3">
+                        <button class="btn btn-emo text-danger me-3">
+                            <i class="far fa-heart"></i> 2.5k
+                        </button>
+                       
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <aside class="">
+            <div class="aside">
+                <div class="heading d-flex justify-content-between align-items-center">
+                    <h5 class="text-white">Trends</h5>
+                    <button class="btn btn-text btn-emo color-text">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+                <div class="aside-content">
+                    <small class="color-text">Football | Trending</small>
+                    <p class="text-white m-0">@C.Ronaldo</p>
+                    <small class="color-text">99k Blogs | 97k Reacts</small>
+                </div>
+                <div class="aside-content">
+                    <small class="color-text">Programming & Coding | Trending</small>
+                    <p class="text-white m-0">@Python</p>
+                    <small class="color-text">56k Blogs | 78k Reacts</small>
+                </div>
+                <div class="aside-content">
+                    <small class="color-text">Health | Trending</small>
+                    <p class="text-white m-0">@CocaCola</p>
+                    <small class="color-text">57k Blogs | 68k Reacts</small>
+                </div>
+                <div class="aside-content">
+                    <small class="color-text">Movies & Tv Series | Trending </small>
+                    <p class="text-white m-0">@Marvel's Loki</p>
+                    <small class="color-text">42k Blogs | 47k Reacts</small>
+                </div>
+                <div class="aside-content">
+                    <a href="" class="text-decoration-none theme-color">Show More</a>
+                </div>
+            </div>
+
+            <div class="aside mt-4">
+                <div class="heading d-flex justify-content-between align-items-center">
+                    <h5 class="text-white">Follow</h5>
+                    <button class="btn btn-text btn-emo color-text">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="image-container profile-pic-big me-2">
+                                <img src="./images/reza.jpg" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">@KhanAsfiReza</p>
+                                <small class="color-text">99k Followers</small>
+                            </div>
+                        </div>
+
+                        <button class="btn-outline-theme btn">
+                            Follow
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="image-container profile-pic-big me-2">
+                                <img src="./images/ronaldo.jpg" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">@Ronaldo</p>
+                                <small class="color-text">199k Followers</small>
+                            </div>
+                        </div>
+                        <button class="btn-outline-theme btn">
+                            Follow
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="img-container profile-pic-big me-2">
+                                <img src="./images/svelte.png" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">@Svelte</p>
+                                <small class="color-text">32k Followers</small>
+                            </div>
+                        </div>
+                        <button class="btn-outline-theme btn">
+                            Follow
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="image-container profile-pic-big me-2">
+                                <img src="./images/person.png" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">@DonaldTrump</p>
+                                <small class="color-text">29k Followers</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-theme">
+                            Follow
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <a href="" class="text-decoration-none theme-color">Show More</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="theme-content-dark-bg mt-5">
+        <div class="container">
+            <h5 class="text-white">Blog Spot</h5>
+            <div class="d-flex">
+            <div class="flex-1">
+                    <ul class="d-flex flex-md-row flex-column">
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Terms</a class="color-text">
+                        </li>
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Privacy Policy</a>
+                        </li>
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Rules</a>
+                        </li>
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Ads</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="align-self-end">
+                <small class="color-text">&copy; All rights reserved to Khan Asfi Reza</small>
+            </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/dashboard.js"></script>
+</html>
