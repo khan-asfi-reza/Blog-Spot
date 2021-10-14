@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
-    <link href="./css/bs.min.css" rel="stylesheet" >
-    <script src="./js/bs.min.js" ></script>
+    <link rel="stylesheet" href="./css/bs.min.css">
+    <link rel="stylesheet" href="./css/util.css">
     <link rel="stylesheet" href="./css/style.css">
+
     <link rel="shortcut icon" href="/Favicon/favicon.ico" type="image/x-icon">
     <title>Blog Spot</title>
 </head>
@@ -21,7 +22,7 @@
                 <div class="image-container profile-pic-big">
                     <img src="./images/reza.jpg" alt="Profile Picture">
                 </div>
-                <h5 class="text-white">Khan Asfi Reza</h5>
+                <h6 class="text-white">Khan Asfi Reza</h6>
             </div>
             <div class="bcumb-menu mt-4">
                 <ul>
@@ -57,7 +58,7 @@
     <header class="theme-content-dark-bg">
         <div class="container d-flex justify-space-between align-items-center h-100">
             <div class="d-flex align-items-center flex-2 nav-item-1">
-                <h1 class="text-white m-0 me-4">B</h2>
+                <h1 class="text-white m-0 me-4">B</h1>
                 <div class="search-bar">
                     <input id="searchBarInput" placeholder="Search blogs" type="text">
                     <button id="searchBarBtn"><i class="fa fa-search"></i></button>
@@ -101,10 +102,10 @@
                     <small class="text-white p-0 m-0">Khan Asfi Reza</small>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-outline-light btn-round" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-outline-light btn-round" id="dropdownMenuButton" >
                         <i class="fas fa-caret-down"></i>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul class="dropdown-menu" id="dropDownMenu">
                         <li>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <i class="fas fa-cog me-3"></i> <span>Settings</span>
@@ -132,15 +133,15 @@
     </header>
     
     <main class="container dashboard-main mt-4">
-        <section>
-            <div class="user-input w-100 theme-content-bg">
+        <section id="contentSection">
+            <div class="user-input w-100 theme-content-bg intro-anim">
                 <div class="g-item g-item-1 d-flex align-items-center input-section s-1">
                     <div class="image-container profile-pic-big me-2">
                         <img src="./images/reza.jpg" alt="">
                     </div>
-                    <h6 class="text-white">Khan Asfi Reza</h4>
+                    <h6 class="text-white">Khan Asfi Reza</h6>
                 </div>
-                <p class="g-item g-item-2 color-text m-0 p-0" contenteditable="true">What do you want to write?</p>
+                <p class="g-item g-item-2 color-text m-0 p-0" id="contentWriter" contenteditable="true">What do you want to write?</p>
                 <div class="g-item g-item-3 d-flex align-items-center justify-content-between w-100 s-2">
                     <div class="d-flex">
                         <button class="btn btn-text user-btn btn-emo color-text me-4">
@@ -154,11 +155,11 @@
                         </button>
                     </div>
                     <div>
-                        <button class="btn btn-theme btn-rounded">Publish <i class="far fa-paper-plane"></i></button>
+                        <button id="publishBtn" class="btn btn-theme btn-rounded">Publish <i class="far fa-paper-plane"></i></button>
                     </div>
                 </div>
             </div>
-            <article class="content-box ctb theme-content-bg mt-4">
+            <article class="content-box ctb theme-content-bg mt-4 intro-anim">
                 <div class="content-inner">
                     <div class="d-flex justify-content-between align-items-md-center">
                         <div class="d-flex flex-column flex-md-row align-items-md-center">
@@ -180,27 +181,8 @@
                         <br>
                         Personally, I believe that React has a great future, and that you should start (or continue using) it in your projects. Here’s why.
                         <br>
-                        <br>
-                        <h4 class="text-white">Building applications with React</h4><br>
-                        <ol class="color-white">
-                            <li>
-                               <b class="text-white">Development Efficiency :</b> The introduction of React questioned how we code web applications. It was a massive shift from what we knew and what the best practices were at the time. It told us not to separate HTML, CSS, and JS, for example. It also taught us to build more modular components and connect them to build complex applications, which was not very common on the web. This created a super efficient library that facilitates developers’ tasks in small or large projects, allowing quick turnarounds and delivering fast without compromising quality.
-                            </li><br>
-                            <li>
-                                <b class="text-white">Flexibility and maintainability :</b> The React mindset modularized the application in small, easy-to-maintain components that, when connected, sum up to a complex solution. As a result of this practice and by avoiding coupling components, React produces maintainable and scalable applications.
-                            </li><br>
-                            <li>
-                                <b class="text-white">Great for scalable prototypes :</b> Because of its moldability and fast development times, React makes up for an excellent choice to build your prototypes and MVPs. It allows you to produce quick results without sacrificing the scalability of the final product.
-                            </li><br>
-                            <li>
-                                <b class="text-white">Performance :</b> Last but not least, React is fast! Though questioned in some articles, React is a fast library, and it offers tools and methods for developers to fine-tune their components. I’m not saying React is the most rapid library/framework for every use-case, but it is a very efficient solution for most. Here’s a comparison of benchmarks for many different frameworks and libraries for performing the same operations. You can select React, React with Hooks and Vue, Angular, or many others to compare them.
-                            </li><br>
-                            
-                        </ol>
                     </p>
-                    <div class="image-container">
-                        <img src="./images/performance.avif" alt="">
-                    </div>
+
                     <a href="/blog.html" class="text-decoration-none theme-color my-3 d-block">Read More ...</a>
                     <div class="mt-3">
                         <button class="btn btn-emo text-danger me-3">
@@ -217,7 +199,39 @@
             </article>
 
 
-            <article class="content-box ctb theme-content-bg mt-4">
+            <article class="content-box ctb theme-content-bg mt-4 intro-anim">
+                <div class="content-inner">
+                    <div class="d-flex justify-content-between align-items-md-center">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="profile-pic image-container me-2">
+                                <img src="./images/chandler.jpg" alt="">
+                            </div>
+                            <h6 class="text-white m-0 me-1 mt-tab-1">Chandler Bing</h6>
+                            <small class="color-text m-0 mt-tab-1">@chandlerbingaling | 25min</small>
+                        </div>
+                        <button class="btn text-white btn-more">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <p class="my-3 color-white">
+                        I’m a gym member. I try to go four times a week, but I’ve missed the last twelve hundred times.
+                    </p>
+                    <div class="mt-3">
+                        <button class="btn btn-emo text-danger me-3">
+                            <i class="far fa-heart"></i> 155.5k
+                        </button>
+                        <button class="btn btn-emo theme-color me-3">
+                            <i class="fas fa-share"></i> 113.2k
+                        </button>
+                        <button class="btn btn-emo text-success me-3">
+                            <i class="fas fa-comment-dots"></i> 122.2k
+                        </button>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="content-box ctb theme-content-bg mt-4 row-2 intro-anim">
                 <div class="content-inner">
                     <div class="d-flex justify-content-between align-items-md-center">
                         <div class="d-flex flex-column flex-md-row align-items-md-center">
@@ -245,10 +259,11 @@
                     </p>
                     <div class="theme-code w-100 p-2">
                         <code >
-                            &lt;script&gt;<br>
-                            let name = &quot;world&quot;;<br>
-                            &lt;/script&gt;<br>
-                            &lt;h1&gt;Hello, {name}&lt;/h1&gt;
+                            <span style="color: #d73926">&lt;script&gt;</span><br>
+                            <span style="color: #cd2afa">let</span> <span style="color: #eaffdf">name</span> = &quot;world&quot;;<br>
+                            <span style="color: #d73926">&lt;/script&gt;</span><br>
+                            <span style="color:#ff6d6d;">&lt;h1&gt;</span> <span style="color: #f8f9fa">Hello , {name} </span> <span style="color:#ff6d6d;">&lt;/h1&gt;</span><br>
+
                         </code>
                     </div>
                     <div class="image-container">
@@ -277,7 +292,7 @@
             </article>
 
 
-            <article class="content-box ctb theme-content-bg mt-4">
+            <article class="content-box ctb theme-content-bg mt-4 intro-anim">
                 <div class="content-inner">
                     <div class="d-flex align-items-md-center justify-content-between">
                         <div class="d-flex flex-column flex-md-row align-items-md-center">
@@ -309,40 +324,10 @@
                 </div>
             </article>
 
-            <article class="content-box ctb theme-content-bg mt-4">
-                <div class="content-inner">
-                    <div class="d-flex justify-content-between align-items-md-center">
-                        <div class="d-flex flex-column flex-md-row align-items-md-center">
-                            <div class="profile-pic image-container me-2">
-                                <img src="./images/chandler.jpg" alt="">
-                            </div>
-                            <h6 class="text-white m-0 me-1 mt-tab-1">Chandler Bing</h6>
-                            <small class="color-text m-0 mt-tab-1">@chandlerbingaling | 25min</small>
-                        </div>
-                        <button class="btn text-white btn-more">
-                            <i class="fas fa-ellipsis-v"></i>
-                        </button>
-                    </div>
-                    <p class="my-3 color-white">
-                        I’m a gym member. I try to go four times a week, but I’ve missed the last twelve hundred times.
-                    </p>
-                    <div class="mt-3">
-                        <button class="btn btn-emo text-danger me-3">
-                            <i class="far fa-heart"></i> 155.5k
-                        </button>
-                        <button class="btn btn-emo theme-color me-3">
-                            <i class="fas fa-share"></i> 113.2k
-                        </button>
-                        <button class="btn btn-emo text-success me-3">
-                            <i class="fas fa-comment-dots"></i> 122.2k
-                        </button>
-                        
-                    </div>
-                </div>
-            </article>
+
         </section>
         <section  class="row-3">
-            <article class="content-box ctb theme-content-bg">
+            <article class="content-box ctb theme-content-bg intro-anim">
                 <div class="content-inner">
                     <div class="d-flex justify-content-between align-items-md-center">
                         <div class="d-flex flex-column flex-md-row align-items-md-center">
@@ -382,7 +367,7 @@
                 </div>
             </article>
         </section>
-        <aside class="">
+        <aside class="intro-anim">
             <div class="aside">
                 <div class="heading d-flex justify-content-between align-items-center">
                     <h5 class="text-white">Trends</h5>
@@ -511,7 +496,7 @@
                         </div>
 
                         <button class="btn-outline-theme btn">
-                            Follow
+                            Subscribe
                         </button>
                     </div>
                 </div>
@@ -525,7 +510,7 @@
                             </div>
                         </div>
                         <button class="btn-outline-theme btn">
-                            Follow
+                            Subscribe
                         </button>
                     </div>
                 </div>
@@ -539,7 +524,7 @@
                             </div>
                         </div>
                         <button class="btn-outline-theme btn">
-                            Follow
+                            Subscribe
                         </button>
                     </div>
                 </div>
@@ -553,7 +538,99 @@
                             </div>
                         </div>
                         <button class="btn btn-outline-theme">
-                            Follow
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <a href="" class="text-decoration-none theme-color">Show More</a>
+                </div>
+            </div>
+            <div class="aside mt-4 d-n-none d-md-block">
+                <div class="heading d-flex justify-content-between align-items-center">
+                    <h5 class="text-white">Messages</h5>
+                    <button class="btn btn-text btn-emo color-text">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="image-container profile-pic-big me-2">
+                                <img src="./images/reza.jpg" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">Asfi Reza</p>
+                                <small class="color-text">Reza: How are you ?</small>
+                            </div>
+                        </div>
+
+                        <button class="btn-outline-success btn">
+                            Text <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="image-container profile-pic-big me-2">
+                                <img src="./images/chandler.jpg" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">Chandler</p>
+                                <small class="color-text">Chandler: Can I be more good?</small>
+                            </div>
+                        </div>
+                        <button class="btn-outline-success btn">
+                            Text <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="image-container profile-pic-big me-2">
+                                <img src="./images/ronaldo.jpg" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">Ronaldo</p>
+                                <small class="color-text">Ronaldo: Let's meet in spain</small>
+                            </div>
+                        </div>
+                        <button class="btn-outline-success btn">
+                            Text <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="img-container profile-pic-big me-2">
+                                <img src="./images/svelte.png" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">Svelte</p>
+                                <small class="color-text">Svelte: Thanks for the support, take love</small>
+                            </div>
+                        </div>
+                        <button class="btn-outline-success btn">
+                            Text <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="aside-content">
+                    <div class="aside-content-follow">
+                        <div class="d-flex align-items-center">
+                            <div class="image-container profile-pic-big me-2">
+                                <img src="./images/person.png" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white m-0">DonaldTrump</p>
+                                <small class="color-text">Trump: Please unblock my account</small>
+                            </div>
+                        </div>
+                        <button class="btn-outline-success btn">
+                            Text <i class="fa fa-paper-plane"></i>
                         </button>
                     </div>
                 </div>
@@ -565,30 +642,92 @@
     </main>
     <footer class="theme-content-dark-bg mt-5">
         <div class="container">
-            <h5 class="text-white">Blog Spot</h5>
-            <div class="d-flex">
-            <div class="flex-1">
-                    <ul class="d-flex flex-md-row flex-column">
+            <h2 class="text-white mb-5 mt-4">Blog Spot</h2>
+            <div class="d-grid footer-grid">
+                <div class="rc-1">
+                        <h3 class="text-white">Support</h3>
+                        <ul class="d-flex flex-column">
+                            <li class="me-2 mt-1">
+                                <a class="color-text" href="">Terms</a >
+                            </li>
+                            <li class="me-2 mt-1">
+                                <a class="color-text" href="">Privacy Policy</a>
+                            </li>
+                            <li class="me-2 mt-1">
+                                <a class="color-text" href="">Rules</a>
+                            </li>
+                            <li class="me-2 mt-1">
+                                <a class="color-text" href="">Ads</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="rc-2">
+                    <h3 class="text-white">Developer</h3>
+                    <ul class="d-flex flex-column">
                         <li class="me-2 mt-1">
-                            <a class="color-text" href="">Terms</a class="color-text">
+                            <a class="color-text" href="">Career</a >
                         </li>
                         <li class="me-2 mt-1">
-                            <a class="color-text" href="">Privacy Policy</a>
+                            <a class="color-text" href="">Online Service</a>
                         </li>
                         <li class="me-2 mt-1">
-                            <a class="color-text" href="">Rules</a>
+                            <a class="color-text" href="">Developer Job</a>
                         </li>
                         <li class="me-2 mt-1">
-                            <a class="color-text" href="">Ads</a>
+                            <a class="color-text" href="">Store</a>
                         </li>
                     </ul>
+                </div>
+                <div class="rc-2">
+                    <h3 class="text-white">Service</h3>
+                    <ul class="d-flex flex-column">
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Support</a >
+                        </li>
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Online Service</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="rc-2">
+                    <h3 class="text-white">Privacy</h3>
+                    <ul class="d-flex flex-column">
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Policy</a >
+                        </li>
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">Terms and Condition</a>
+                        </li>
+                        <li class="me-2 mt-1">
+                            <a class="color-text" href="">About</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="align-self-end">
-                <small class="color-text">&copy; All rights reserved to Khan Asfi Reza</small>
-            </div>
+            <div class="u-line my-3"></div>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="d-flex flex-row">
+                    <a href="https://www.khanasfireza.dev" class="color-text me-2 text-size-1">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.khanasfireza.dev" class="color-text me-2 text-size-1">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.github.com/khan-asfi-reza" class="color-text me-2 text-size-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.khanasfireza.dev" class="color-text me-2 text-size-1">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <small class="color-text text-center">
+                    All Rights Reserved to @Khan Asfi Reza
+                </small>
             </div>
         </div>
     </footer>
 </body>
+<script src="./js/index.js"></script>
 <script src="./js/dashboard.js"></script>
 </html>
