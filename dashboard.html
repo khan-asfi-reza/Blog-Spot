@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./css/bs.min.css">
     <link rel="stylesheet" href="./css/util.css">
     <link rel="stylesheet" href="./css/style.css">
-
     <link rel="shortcut icon" href="/Favicon/favicon.ico" type="image/x-icon">
     <title>Blog Spot</title>
 </head>
-<body class="theme-bg-dark">
+<body id="body" class="theme-bg-dark">
     <aside id="bcumb" class="breadcrumb theme-content-dark-bg bcumb-close">
-        <button id="bcumbCloseBtn" class="btn text-white close-btn">
+        <button id="bcumbCloseBtn" class="btn text-main close-btn">
             &times;
         </button>
         <div>
@@ -22,7 +20,7 @@
                 <div class="image-container profile-pic-big">
                     <img src="./images/reza.jpg" alt="Profile Picture">
                 </div>
-                <h6 class="text-white">Khan Asfi Reza</h6>
+                <h6 class="text-main">@Reza</h6>
             </div>
             <div class="bcumb-menu mt-4">
                 <ul>
@@ -32,22 +30,22 @@
                         </a>
                     </li>
                     <li>
-                        <a class="color-white" href="./dashboard.html">
+                        <a class="color-white" href="./blog.html">
                             <i class="fas fa-hashtag me-2"></i> Trending
                         </a>
                     </li>
                     <li>
-                        <a class="color-white" href="./dashboard.html">
+                        <a class="color-white" href="./user.html">
                             <i class="fa fa-bell me-2"> </i>Notification 
                         </a>
                     </li>
                     <li>
-                        <a class="color-white" href="./dashboard.html">
+                        <a class="color-white" href="./blog.html">
                             <i class="fas fa-envelope me-2"></i> Messages
                         </a>
                     </li>
                     <li>
-                        <a class="color-white" href="./dashboard.html">
+                        <a class="color-white" href="./user.html">
                             <i class="fas fa-user me-2"></i> Followers
                         </a>
                     </li>
@@ -58,7 +56,7 @@
     <header class="theme-content-dark-bg">
         <div class="container d-flex justify-space-between align-items-center h-100">
             <div class="d-flex align-items-center flex-2 nav-item-1">
-                <h1 class="text-white m-0 me-4">B</h1>
+                <h1 class="text-main m-0 me-4">B</h1>
                 <div class="search-bar">
                     <input id="searchBarInput" placeholder="Search blogs" type="text">
                     <button id="searchBarBtn"><i class="fa fa-search"></i></button>
@@ -77,19 +75,19 @@
                         </a>
                     </li>
                     <li>
-                        <a class="color-white" href="./dashboard.html">
-                            <i class="fa fa-bell">
-                            </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="color-white" href="./dashboard.html">
+                        <a class="color-white" href="./blog.html">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </li>
                     <li>
-                        <a class="color-white" href="./dashboard.html">
+                        <a class="color-white" href="./user.html">
                             <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="color-white" href="./user.html">
+                            <i class="fa fa-bell">
+                            </i>
                         </a>
                     </li>
                 </ul>
@@ -99,7 +97,10 @@
                     <div class="profile-pic image-container me-2">
                         <img src="./images/reza.jpg" alt="">
                     </div>
-                    <small class="text-white p-0 m-0">Khan Asfi Reza</small>
+                    <small class="text-main p-0 m-0 me-2">@Reza</small>
+                    <span class="theme-changer" id="themeChanger2">
+                        <i class="btn color-white fas fa-moon"></i>
+                </span>
                 </div>
                 <div class="dropdown">
                     <button class="btn btn-outline-light btn-round" id="dropdownMenuButton" >
@@ -125,6 +126,9 @@
                 </div>
             </div>
             <div class="flex-1 expand-btn">
+                <span class="theme-changer" id="themeChanger">
+                        <i class="btn color-white fas fa-moon"></i>
+                </span>
                 <button id="bcumbBtn" class="btn color-white">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -139,7 +143,7 @@
                     <div class="image-container profile-pic-big me-2">
                         <img src="./images/reza.jpg" alt="">
                     </div>
-                    <h6 class="text-white">Khan Asfi Reza</h6>
+                    <h6 class="text-main">Khan Asfi Reza</h6>
                 </div>
                 <p class="g-item g-item-2 color-text m-0 p-0" id="contentWriter" contenteditable="true">What do you want to write?</p>
                 <div class="g-item g-item-3 d-flex align-items-center justify-content-between w-100 s-2">
@@ -159,6 +163,81 @@
                     </div>
                 </div>
             </div>
+
+            <article class="content-box ctb theme-content-bg mt-4 intro-anim">
+                <div class="content-inner">
+                    <div class="d-flex justify-content-between align-items-md-center">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="profile-pic image-container me-2">
+                                <img src="./images/einstein.jpg" alt="">
+                            </div>
+                            <h6 class="text-main m-0 me-1 mt-tab-1">Einstein</h6>
+                            <small class="color-text m-0 mt-tab-1">@Einstein | 25min</small>
+                        </div>
+                        <button class="btn text-main btn-more">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h3 class="my-3 text-main">Torque</h3>
+                    <p class="my-3 color-white">
+                        In physics and mechanics, torque is the rotational equivalent of linear force. It is also referred to as the moment, moment of force, rotational force or turning effect, depending on the field of study. The concept originated with the studies by Archimedes of the usage of levers. Just as a linear force is a push or a pull, a torque can be thought of as a twist to an object around a specific axis. Another definition of torque is the product of the magnitude of the force and the perpendicular distance of the line of action of a force from the axis of rotation. The symbol for torque is  τ, the lowercase Greek letter tau. When being referred to as moment of force, it is commonly denoted by M.
+                        <br><br>
+
+                        In three dimensions, the torque is a pseudovector; for point particles, it is given by the cross product of the position vector (distance vector) and the force vector. The magnitude of torque of a rigid body depends on three quantities: the force applied, the lever arm vector connecting the point about which the torque is being measured to the point of force application, and the angle between the force and lever arm vectors. In symbols:
+                        <br><br>
+                        Torque = | R || F | sin(x)
+                    </p>
+
+                    <div class="mt-3">
+                        <button class="btn btn-emo text-danger me-2">
+                            <i class="far fa-heart"></i> 155.5k
+                        </button>
+                        <button class="btn btn-emo theme-color me-2">
+                            <i class="fas fa-share"></i> 113.2k
+                        </button>
+                        <button class="btn btn-emo text-success me-2">
+                            <i class="fas fa-comment-dots"></i> 122.2k
+                        </button>
+
+                    </div>
+                </div>
+            </article>
+            <article class="content-box ctb theme-content-bg mt-4 intro-anim">
+                <div class="content-inner">
+                    <div class="d-flex align-items-md-center justify-content-between">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="profile-pic image-container me-2">
+                                <img src="./images/dave.jpg" alt="">
+                            </div>
+                            <h6 class="text-main m-0 me-1 mt-tab-1">Professor Dave</h6>
+                            <small class="color-text m-0 mt-tab-1">@Professor Dave | 20min</small>
+                        </div>
+                        <button class="btn text-main btn-more">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h3 class="my-3 text-main">Second Derivative</h3>
+                    <p class="my-3 color-white">
+                        In calculus, the second derivative, or the second order derivative, of a function f is the derivative of the derivative of f. Roughly speaking, the second derivative measures how the rate of change of a quantity is itself changing; for example, the second derivative of the position of an object with respect to time is the instantaneous acceleration of the object, or the rate at which the velocity of the object is changing with respect to time. In Leibniz notation:
+                        <br><br>
+                        where a is acceleration, v is velocity, t is time, x is position, and d is the instantaneous "delta" or change. The last expression  is the second derivative of position (x) with respect to time.
+
+                        On the graph of a function, the second derivative corresponds to the curvature or concavity of the graph. The graph of a function with a positive second derivative is upwardly concave, while the graph of a function with a
+                    </p>
+                    <div class="mt-3">
+                        <button class="btn btn-emo text-danger me-2">
+                            <i class="far fa-heart"></i> 15.5k
+                        </button>
+                        <button class="btn btn-emo theme-color me-2">
+                            <i class="fas fa-share"></i> 11.2k
+                        </button>
+                        <button class="btn btn-emo text-success me-2">
+                            <i class="fas fa-comment-dots"></i> 12.2k
+                        </button>
+
+                    </div>
+                </div>
+            </article>
             <article class="content-box ctb theme-content-bg mt-4 intro-anim">
                 <div class="content-inner">
                     <div class="d-flex justify-content-between align-items-md-center">
@@ -166,14 +245,14 @@
                             <div class="profile-pic image-container me-2">
                                 <img src="./images/reza.jpg" alt="">
                             </div>
-                            <h6 class="text-white m-0 me-1 mt-tab-1">Khan Asfi Reza</h6>
+                            <h6 class="text-main m-0 me-1 mt-tab-1">Khan Asfi Reza</h6>
                             <small class="color-text m-0 mt-tab-1">@khanasfireza | 1min</small>
                         </div>
-                        <button class="btn text-white btn-more">
+                        <button class="btn text-main btn-more">
                             <i class="fas fa-ellipsis-v"></i>
                         </button>
                     </div>
-                    <h4 class="text-white mt-3">So you think you should stop using React? Here’s why you’re wrong</h4>
+                    <h4 class="text-main mt-3">So you think you should stop using React? Here’s why you’re wrong</h4>
                     <p class="color-white">
                         React was created and open-sourced in 2013 by Facebook based upon the idea of having a JavaScript library for building web applications. Since then, it has grown significantly.
                         <br>
@@ -185,52 +264,18 @@
 
                     <a href="/blog.html" class="text-decoration-none theme-color my-3 d-block">Read More ...</a>
                     <div class="mt-3">
-                        <button class="btn btn-emo text-danger me-3">
+                        <button class="btn btn-emo text-danger me-2">
                             <i class="far fa-heart"></i> 15.5k
                         </button>
-                        <button class="btn btn-emo theme-color me-3">
+                        <button class="btn btn-emo theme-color me-2">
                             <i class="fas fa-share"></i> 11.2k
                         </button>
-                        <button class="btn btn-emo text-success me-3">
+                        <button class="btn btn-emo text-success me-2">
                             <i class="fas fa-comment-dots"></i> 12.2k
                         </button>
                     </div>
                 </div>
             </article>
-
-
-            <article class="content-box ctb theme-content-bg mt-4 intro-anim">
-                <div class="content-inner">
-                    <div class="d-flex justify-content-between align-items-md-center">
-                        <div class="d-flex flex-column flex-md-row align-items-md-center">
-                            <div class="profile-pic image-container me-2">
-                                <img src="./images/chandler.jpg" alt="">
-                            </div>
-                            <h6 class="text-white m-0 me-1 mt-tab-1">Chandler Bing</h6>
-                            <small class="color-text m-0 mt-tab-1">@chandlerbingaling | 25min</small>
-                        </div>
-                        <button class="btn text-white btn-more">
-                            <i class="fas fa-ellipsis-v"></i>
-                        </button>
-                    </div>
-                    <p class="my-3 color-white">
-                        I’m a gym member. I try to go four times a week, but I’ve missed the last twelve hundred times.
-                    </p>
-                    <div class="mt-3">
-                        <button class="btn btn-emo text-danger me-3">
-                            <i class="far fa-heart"></i> 155.5k
-                        </button>
-                        <button class="btn btn-emo theme-color me-3">
-                            <i class="fas fa-share"></i> 113.2k
-                        </button>
-                        <button class="btn btn-emo text-success me-3">
-                            <i class="fas fa-comment-dots"></i> 122.2k
-                        </button>
-
-                    </div>
-                </div>
-            </article>
-
             <article class="content-box ctb theme-content-bg mt-4 row-2 intro-anim">
                 <div class="content-inner">
                     <div class="d-flex justify-content-between align-items-md-center">
@@ -238,14 +283,14 @@
                             <div class="profile-pic image-container me-2">
                                 <img src="./images/svelte.png" alt="">
                             </div>
-                            <h6 class="text-white m-0 me-1 mt-tab-1">Svelte</h6>
+                            <h6 class="text-main m-0 me-1 mt-tab-1">Svelte</h6>
                             <small class="color-text m-0 mt-tab-1">@svelte | 1min</small>
                         </div>
-                        <button class="btn text-white btn-more">
+                        <button class="btn text-main btn-more">
                             <i class="fas fa-ellipsis-v"></i>
                         </button>
                     </div>
-                    <h4 class="text-white mt-3">Svelte Framework</h4>
+                    <h4 class="text-main mt-3">Svelte Framework</h4>
                     <p class="mt-3 color-white">
                         Svelte is one of the fastest-growing web development frameworks, and SvelteKit is Svelte's web app development framework. In this tutorial, you'll learn how to build and launch a website from scratch with Svelte and SvelteKit.
                         <br>
@@ -277,13 +322,13 @@
                         SvelteKit allows you to make static sites, server-rendered sites, and even hybrid static-and-server-rendered web apps. It also has extremely fast hot reloading in development mode because of the way it bundles JavaScript.
                     </p>
                     <div class="mt-3">
-                        <button class="btn btn-emo text-danger me-3">
+                        <button class="btn btn-emo text-danger me-2">
                             <i class="far fa-heart"></i> 15.5k
                         </button>
-                        <button class="btn btn-emo theme-color me-3">
+                        <button class="btn btn-emo theme-color me-2">
                             <i class="fas fa-share"></i> 11.2k
                         </button>
-                        <button class="btn btn-emo text-success me-3">
+                        <button class="btn btn-emo text-success me-2">
                             <i class="fas fa-comment-dots"></i> 12.2k
                         </button>
                     </div>
@@ -292,37 +337,7 @@
             </article>
 
 
-            <article class="content-box ctb theme-content-bg mt-4 intro-anim">
-                <div class="content-inner">
-                    <div class="d-flex align-items-md-center justify-content-between">
-                        <div class="d-flex flex-column flex-md-row align-items-md-center">
-                            <div class="profile-pic image-container me-2">
-                                <img src="./images/person.png" alt="">
-                            </div>
-                            <h6 class="text-white m-0 me-1 mt-tab-1">Donald J Trump</h6>
-                            <small class="color-text m-0 mt-tab-1">@donaldtrump | 20min</small>
-                        </div>
-                        <button class="btn text-white btn-more">
-                            <i class="fas fa-ellipsis-v"></i>
-                        </button>
-                    </div>
-                    <p class="my-3 color-white">
-                        I was a president of USA. I lost the election, now I am sad, but me. Joe Biden is the new President. Congratulations Joe Biden, Take Love 
-                    </p>
-                    <div class="mt-3">
-                        <button class="btn btn-emo text-danger me-3">
-                            <i class="far fa-heart"></i> 15.5k
-                        </button>
-                        <button class="btn btn-emo theme-color me-3">
-                            <i class="fas fa-share"></i> 11.2k
-                        </button>
-                        <button class="btn btn-emo text-success me-3">
-                            <i class="fas fa-comment-dots"></i> 12.2k
-                        </button>
-                        
-                    </div>
-                </div>
-            </article>
+
 
 
         </section>
@@ -334,10 +349,10 @@
                             <div class="profile-pic image-container me-2">
                                 <img src="./images/dj.jpg" alt="">
                             </div>
-                            <h6 class="text-white m-0 me-1 mt-tab-1">Django</h6>
+                            <h6 class="text-main m-0 me-1 mt-tab-1">Django</h6>
                             <small class="color-text m-0 mt-tab-1">@django | 25min</small>
                         </div>
-                        <button class="btn text-white btn-more">
+                        <button class="btn text-main btn-more">
                             <i class="fas fa-ellipsis-v"></i>
                         </button>
                     </div>
@@ -353,13 +368,13 @@
                     </p>
                     <a href="/blog.html" class="text-decoration-none theme-color my-3 d-block">Read More ...</a>
                     <div class="mt-3">
-                        <button class="btn btn-emo text-danger me-3">
+                        <button class="btn btn-emo text-danger me-2">
                             <i class="far fa-heart"></i> 155.5k
                         </button>
-                        <button class="btn btn-emo theme-color me-3">
+                        <button class="btn btn-emo theme-color me-2">
                             <i class="fas fa-share"></i> 113.2k
                         </button>
-                        <button class="btn btn-emo text-success me-3">
+                        <button class="btn btn-emo text-success me-2">
                             <i class="fas fa-comment-dots"></i> 122.2k
                         </button>
                         
@@ -370,29 +385,29 @@
         <aside class="intro-anim">
             <div class="aside">
                 <div class="heading d-flex justify-content-between align-items-center">
-                    <h5 class="text-white">Trends</h5>
+                    <h5 class="text-main">Trends</h5>
                     <button class="btn btn-text btn-emo color-text">
                         <i class="fas fa-cog"></i>
                     </button>
                 </div>
                 <div class="aside-content">
-                    <small class="color-text">Football | Trending</small>
-                    <p class="text-white m-0">@C.Ronaldo</p>
+                    <small class="color-text">Physics | Trending</small>
+                    <p class="text-main m-0">@Veritasium</p>
                     <small class="color-text">99k Blogs | 97k Reacts</small>
                 </div>
                 <div class="aside-content">
                     <small class="color-text">Programming & Coding | Trending</small>
-                    <p class="text-white m-0">@Python</p>
+                    <p class="text-main m-0">@Python</p>
                     <small class="color-text">56k Blogs | 78k Reacts</small>
                 </div>
                 <div class="aside-content">
-                    <small class="color-text">Health | Trending</small>
-                    <p class="text-white m-0">@CocaCola</p>
+                    <small class="color-text">Chemistry | Trending</small>
+                    <p class="text-main m-0">@CocaCola</p>
                     <small class="color-text">57k Blogs | 68k Reacts</small>
                 </div>
                 <div class="aside-content">
-                    <small class="color-text">Movies & Tv Series | Trending </small>
-                    <p class="text-white m-0">@Marvel's Loki</p>
+                    <small class="color-text">Chemistry | Trending </small>
+                    <p class="text-main m-0">@Buffer Solution</p>
                     <small class="color-text">42k Blogs | 47k Reacts</small>
                 </div>
                 <div class="aside-content">
@@ -402,7 +417,7 @@
 
             <div class="aside mt-4">
                 <div class="heading d-flex justify-content-between align-items-center">
-                    <h5 class="text-white">Follow</h5>
+                    <h5 class="text-main">Follow</h5>
                     <button class="btn btn-text btn-emo color-text">
                         <i class="fas fa-cog"></i>
                     </button>
@@ -414,7 +429,7 @@
                                 <img src="./images/reza.jpg" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">@KhanAsfiReza</p>
+                                <p class="text-main m-0">@KhanAsfiReza</p>
                                 <small class="color-text">99k Followers</small>
                             </div>
                         </div>
@@ -428,10 +443,10 @@
                     <div class="aside-content-follow">
                         <div class="d-flex align-items-center">
                             <div class="image-container profile-pic-big me-2">
-                                <img src="./images/ronaldo.jpg" alt="">
+                                <img src="./images/einstein.jpg" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">@Ronaldo</p>
+                                <p class="text-main m-0">@Einstein</p>
                                 <small class="color-text">199k Followers</small>
                             </div>
                         </div>
@@ -447,7 +462,7 @@
                                 <img src="./images/svelte.png" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">@Svelte</p>
+                                <p class="text-main m-0">@Svelte</p>
                                 <small class="color-text">32k Followers</small>
                             </div>
                         </div>
@@ -460,10 +475,10 @@
                     <div class="aside-content-follow">
                         <div class="d-flex align-items-center">
                             <div class="image-container profile-pic-big me-2">
-                                <img src="./images/person.png" alt="">
+                                <img src="./images/dave.jpg" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">@DonaldTrump</p>
+                                <p class="text-main m-0">@Professor Dave</p>
                                 <small class="color-text">29k Followers</small>
                             </div>
                         </div>
@@ -480,7 +495,7 @@
 
             <div class="aside mt-4">
                 <div class="heading d-flex justify-content-between align-items-center">
-                    <h5 class="text-white">Contents To Follow</h5>
+                    <h5 class="text-main">Contents To Follow</h5>
                     <button class="btn btn-text btn-emo color-text">
                         <i class="fas fa-cog"></i>
                     </button>
@@ -490,7 +505,7 @@
                         <div class="d-flex align-items-center">
                             
                             <div>
-                                <p class="text-white m-0">@Football</p>
+                                <p class="text-main m-0">@Football</p>
                                 <small class="color-text">99k Followers</small>
                             </div>
                         </div>
@@ -505,7 +520,7 @@
                         <div class="d-flex align-items-center">
                             
                             <div>
-                                <p class="text-white m-0">@Valorant</p>
+                                <p class="text-main m-0">@Valorant</p>
                                 <small class="color-text">199k Followers</small>
                             </div>
                         </div>
@@ -519,7 +534,7 @@
                         <div class="d-flex align-items-center">
                             
                             <div>
-                                <p class="text-white m-0">@Programming</p>
+                                <p class="text-main m-0">@Programming</p>
                                 <small class="color-text">32k Followers</small>
                             </div>
                         </div>
@@ -533,7 +548,7 @@
                         <div class="d-flex align-items-center">
                             
                             <div>
-                                <p class="text-white m-0">@Machine Learning</p>
+                                <p class="text-main m-0">@Machine Learning</p>
                                 <small class="color-text">29k Followers</small>
                             </div>
                         </div>
@@ -548,7 +563,7 @@
             </div>
             <div class="aside mt-4 d-n-none d-md-block">
                 <div class="heading d-flex justify-content-between align-items-center">
-                    <h5 class="text-white">Messages</h5>
+                    <h5 class="text-main">Messages</h5>
                     <button class="btn btn-text btn-emo color-text">
                         <i class="fas fa-cog"></i>
                     </button>
@@ -560,7 +575,7 @@
                                 <img src="./images/reza.jpg" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">Asfi Reza</p>
+                                <p class="text-main m-0">Asfi Reza</p>
                                 <small class="color-text">Reza: How are you ?</small>
                             </div>
                         </div>
@@ -574,11 +589,11 @@
                     <div class="aside-content-follow">
                         <div class="d-flex align-items-center">
                             <div class="image-container profile-pic-big me-2">
-                                <img src="./images/chandler.jpg" alt="">
+                                <img src="./images/dj.jpg" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">Chandler</p>
-                                <small class="color-text">Chandler: Can I be more good?</small>
+                                <p class="text-main m-0">Django</p>
+                                <small class="color-text">Django: Thanks for donating us</small>
                             </div>
                         </div>
                         <button class="btn-outline-success btn">
@@ -590,11 +605,11 @@
                     <div class="aside-content-follow">
                         <div class="d-flex align-items-center">
                             <div class="image-container profile-pic-big me-2">
-                                <img src="./images/ronaldo.jpg" alt="">
+                                <img src="./images/einstein.jpg" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">Ronaldo</p>
-                                <small class="color-text">Ronaldo: Let's meet in spain</small>
+                                <p class="text-main m-0">Einstein</p>
+                                <small class="color-text">Ronaldo: Thanks for supporting us</small>
                             </div>
                         </div>
                         <button class="btn-outline-success btn">
@@ -609,7 +624,7 @@
                                 <img src="./images/svelte.png" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">Svelte</p>
+                                <p class="text-main m-0">Svelte</p>
                                 <small class="color-text">Svelte: Thanks for the support, take love</small>
                             </div>
                         </div>
@@ -622,11 +637,11 @@
                     <div class="aside-content-follow">
                         <div class="d-flex align-items-center">
                             <div class="image-container profile-pic-big me-2">
-                                <img src="./images/person.png" alt="">
+                                <img src="./images/dave.jpg" alt="">
                             </div>
                             <div>
-                                <p class="text-white m-0">DonaldTrump</p>
-                                <small class="color-text">Trump: Please unblock my account</small>
+                                <p class="text-main m-0">Professor Dave</p>
+                                <small class="color-text">Dave: Hey let's make a new video</small>
                             </div>
                         </div>
                         <button class="btn-outline-success btn">
@@ -642,10 +657,10 @@
     </main>
     <footer class="theme-content-dark-bg mt-5">
         <div class="container">
-            <h2 class="text-white mb-5 mt-4">Blog Spot</h2>
+            <h2 class="text-main mb-5 mt-4">Blog Spot</h2>
             <div class="d-grid footer-grid">
                 <div class="rc-1">
-                        <h3 class="text-white">Support</h3>
+                        <h3 class="text-main">Support</h3>
                         <ul class="d-flex flex-column">
                             <li class="me-2 mt-1">
                                 <a class="color-text" href="">Terms</a >
@@ -662,7 +677,7 @@
                         </ul>
                 </div>
                 <div class="rc-2">
-                    <h3 class="text-white">Developer</h3>
+                    <h3 class="text-main">Developer</h3>
                     <ul class="d-flex flex-column">
                         <li class="me-2 mt-1">
                             <a class="color-text" href="">Career</a >
@@ -679,7 +694,7 @@
                     </ul>
                 </div>
                 <div class="rc-2">
-                    <h3 class="text-white">Service</h3>
+                    <h3 class="text-main">Service</h3>
                     <ul class="d-flex flex-column">
                         <li class="me-2 mt-1">
                             <a class="color-text" href="">Support</a >
@@ -691,7 +706,7 @@
                     </ul>
                 </div>
                 <div class="rc-2">
-                    <h3 class="text-white">Privacy</h3>
+                    <h3 class="text-main">Privacy</h3>
                     <ul class="d-flex flex-column">
                         <li class="me-2 mt-1">
                             <a class="color-text" href="">Policy</a >

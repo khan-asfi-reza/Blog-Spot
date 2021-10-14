@@ -38,14 +38,14 @@ function getContent(text){
     "                            <div class=\"profile-pic image-container me-2\">\n" +
     "                                <img src=\"./images/reza.jpg\" alt=\"\">\n" +
     "                            </div>\n" +
-    "                            <h6 class=\"text-white m-0 me-1 mt-tab-1\">Khan Asfi Reza</h6>\n" +
+    "                            <h6 class=\"color-white m-0 me-1 mt-tab-1\">Khan Asfi Reza</h6>\n" +
     "                            <small class=\"color-text m-0 mt-tab-1\">@khanasfireza | 1min</small>\n" +
     "                        </div>\n" +
-    "                        <button class=\"btn text-white btn-more\">\n" +
+    "                        <button class=\"btn color-white btn-more\">\n" +
     "                            <i class=\"fas fa-ellipsis-v\"></i>\n" +
     "                        </button>\n" +
     "                    </div>\n" +
-    "                    <p class=\"color-white\">\n" + text +
+    "                    <p class=\"mt-3 color-white\">\n" + text +
     "                    </p>\n" +
     "                    <div class=\"mt-3\">\n" +
     "                        <button class=\"btn btn-emo text-danger me-3\">\n" +

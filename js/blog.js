@@ -11,7 +11,7 @@ function getComment(text){
         "                            <div class=\"image-container profile-pic-big me-2\">\n" +
         "                                <img src=\"./images/reza.jpg\" alt=\"\">\n" +
         "                            </div>\n" +
-        "                            <h6 class=\"text-white\">Khan Asfi Reza</h6>\n" +
+        "                            <h6 class=\"color-white\">Khan Asfi Reza</h6>\n" +
         "                        </div>\n" +
         "                        <p class=\"color-text mt-3\">\n" +text+
         "                        </p>\n" +

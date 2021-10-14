@@ -94,7 +94,9 @@
     padding: 0.5rem !important;
 }
 
-
+.pb-3{
+    padding-bottom: 1rem !important;
+}
 
 
 h6,  h5, h4,  h3,  h2,  h1{
@@ -120,6 +122,11 @@ h6, h5{
 
 a{
     text-decoration: none;
+
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
 }
 
 ol, ul {
@@ -135,7 +142,7 @@ ol, ul {
 }
 
 .text-success{
-    color: #43ff5a !important;
+    color: #4bc159 !important;;
 }
 
 
@@ -225,15 +232,7 @@ input{
 }
 
 
-.btn-outline-light {
-    color: #f8f9fa;
-    border-color: #f8f9fa;
-}
-.btn-outline-light:hover {
-    color: #000;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
-}
+
 
 .h-100{
     height: 100% !important;
@@ -267,6 +266,7 @@ input{
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
+    right: 0;
 }
 
 
