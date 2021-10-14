@@ -1086,6 +1086,10 @@ footer .u-line{
 }
 
 @media screen and (max-width: 767px){
+    .user-container-grid{
+        grid-template-columns: 1fr !important;
+
+    }
     .dashboard-main{
         grid-template-columns: 1fr;
     }
