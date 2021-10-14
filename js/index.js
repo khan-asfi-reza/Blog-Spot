@@ -1,11 +1,31 @@
 var bd = document.getElementById("body");
+var lightIcon = "<i class=\"btn color-white fas fa-sun\"></i>"
+var darkIcon = "<i class=\"btn color-white fas fa-moon\"></i>"
+
+function changeButtonLight() {
+    lightBtn.innerHTML = darkIcon;
+    lightBtn2.innerHTML = darkIcon;
+}
+
+function changeButtonDark() {
+    lightBtn.innerHTML = lightIcon;
+    lightBtn2.innerHTML = lightIcon;
+}
 
 window.onload = function (){
     lt = localStorage.getItem("theme");
     if(lt === "dark" || lt === "light"){
         bd.classList.add(lt);
+        if(lt === "light"){
+            changeButtonLight();
+        }else{
+            changeButtonDark();
+
+        }
+
     }else{
         bd.classList.add("dark");
+        changeButtonDark();
     }
 }
 var bcumb = document.getElementById("bcumb");
@@ -40,12 +60,16 @@ var lightBtn = document.getElementById("themeChanger");
 
 var lightBtn2 = document.getElementById("themeChanger2");
 
+
+
 function changeTheme(){
     lt = localStorage.getItem("theme");
     if(lt === "dark"){
         localStorage.setItem("theme", "light")
+        changeButtonLight();
     }else{
-        localStorage.setItem("theme", "dark")
+        localStorage.setItem("theme", "dark");
+        changeButtonDark();
     }
     bd.classList.toggle("dark");
     bd.classList.toggle("light");
