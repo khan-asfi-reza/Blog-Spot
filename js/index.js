@@ -1,67 +1,57 @@
+// DOM
+
+// Light Icon HTML Raw
+var lightIcon = "<i class=\"btn color-white fas fa-sun\"></i>";
+var darkIcon = "<i class=\"btn color-white fas fa-moon\"></i>";
+// Body
 var bd = document.getElementById("body");
-var lightIcon = "<i class=\"btn color-white fas fa-sun\"></i>"
-var darkIcon = "<i class=\"btn color-white fas fa-moon\"></i>"
+// Burger Menu
+var burger = document.getElementById("bcumb");
+var burgerBtn = document.getElementById("bcumbBtn");
+var burgerCloseBtn = document.getElementById("bcumbCloseBtn");
+// Light Button
+var headerLightButton = document.getElementById("themeChanger");
+var sidebarLightButton = document.getElementById("themeChanger2");
+// Drop Down Button
+var dropDownButton = document.getElementById("dropdownMenuButton");
+var dropDownMenu = document.getElementById("dropDownMenu");
 
+// Theme Change Functionality
+
+// Change Light Function
 function changeButtonLight() {
-    lightBtn.innerHTML = darkIcon;
-    lightBtn2.innerHTML = darkIcon;
+    headerLightButton.innerHTML = darkIcon;
+    sidebarLightButton.innerHTML = darkIcon;
 }
-
+// Change Button
 function changeButtonDark() {
-    lightBtn.innerHTML = lightIcon;
-    lightBtn2.innerHTML = lightIcon;
+    headerLightButton.innerHTML = lightIcon;
+    sidebarLightButton.innerHTML = lightIcon;
 }
 
+// Change Button HTML Function
+function themeButtonHtmlChange(name = "dark") {
+    if(name === "light"){
+        changeButtonLight()
+    }else{
+        changeButtonDark()
+    }
+}
+
+// Window On load Change Theme
 window.onload = function (){
-    lt = localStorage.getItem("theme");
+    var lt = localStorage.getItem("theme");
     if(lt === "dark" || lt === "light"){
         bd.classList.add(lt);
-        if(lt === "light"){
-            changeButtonLight();
-        }else{
-            changeButtonDark();
-
-        }
+        themeButtonHtmlChange(lt);
 
     }else{
         bd.classList.add("dark");
         changeButtonDark();
     }
 }
-var bcumb = document.getElementById("bcumb");
-var bcumbBtn = document.getElementById("bcumbBtn");
-var bcumbCloseBtn = document.getElementById("bcumbCloseBtn");
 
-function bcumbClose(){
-    bcumb.classList.toggle("bcumb-close");
-
-}
-bcumbBtn.onclick = bcumbClose;
-bcumbCloseBtn.onclick = bcumbClose;
-
-var ctb = document.querySelectorAll('.ctb');
-
-for(var i=0; i<ctb.length; i++){
-    ctb[i].onclick = function(){
-        window.location = "./blog.html";
-    }
-}
-
-var dropDownButton = document.getElementById("dropdownMenuButton");
-
-var dropDownMenu = document.getElementById("dropDownMenu");
-
-dropDownButton.onclick = function (){
-    dropDownMenu.classList.toggle("dropdown-menu-open");
-}
-
-
-var lightBtn = document.getElementById("themeChanger");
-
-var lightBtn2 = document.getElementById("themeChanger2");
-
-
-
+// Change Body Theme
 function changeTheme(){
     lt = localStorage.getItem("theme");
     if(lt === "dark"){
@@ -75,10 +65,35 @@ function changeTheme(){
     bd.classList.toggle("light");
 }
 
-lightBtn2.onclick = function (){
+// Button Click Change Theme
+sidebarLightButton.onclick = function (){
     changeTheme();
 }
 
-lightBtn.onclick = function (){
+headerLightButton.onclick = function (){
     changeTheme();
+}
+
+
+// Burger Menu Close Open
+function burgerClose(){
+    burger.classList.toggle("bcumb-close");
+}
+
+// Burger Buttons
+burgerBtn.onclick = burgerClose;
+burgerCloseBtn.onclick = burgerClose;
+dropDownButton.onclick = function (){
+    dropDownMenu.classList.toggle("dropdown-menu-open");
+}
+
+
+// All Contents On Click Change Link
+var ctb = document.querySelectorAll('.ctb');
+
+// Loop
+for(var i=0; i<ctb.length; i++){
+    ctb[i].onclick = function(){
+        window.location = "./blog.html";
+    }
 }

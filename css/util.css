@@ -160,6 +160,11 @@ ol, ul {
     display: block;
 }
 
+
+.d-none{
+    display: none !important;
+}
+
 .flex-column{
     flex-direction: column;
 }
@@ -200,8 +205,6 @@ ol, ul {
     flex: 3;
 }
 
-
-
 input{
     font-size: inherit;
 }
@@ -227,12 +230,90 @@ input{
     transition: all 0.15s ease-in-out;
 }
 
+
+.btn:hover{
+    color: var(--theme-color);
+}
+
+.theme-color{
+    color: var(--theme-color);
+}
+.theme-bg{
+    background-color: var(--theme-color);
+}
+
+.theme-content-dark-bg{
+    background-color: var(--theme-content-dark);
+}
+
+.theme-content-inner-bg{
+    background-color: var(--theme-content-inner);
+}
+
+.theme-content-bg{
+    background-color: var(--theme-content);
+}
+
+.color-white{
+    color: var(--text-head);
+}
+
+.text-main{
+    color: var(--text-main);
+}
+
+.color-text{
+    color: var(--normal-text);
+}
+.theme-dark{
+    color: var(--theme-bg-dark);
+}
+
+.theme-sm-dark-color{
+    color: var(--theme-sc-dark);
+}
+
+.theme-bg-dark{
+    background-color: var(--theme-bg-dark);
+}
+
+.justify-self-end{
+    justify-self: end;
+}
+
+.btn-theme{
+    background: var(--theme-color);
+    color: var(--btn-color);
+}
+
+.btn-theme:hover, .btn-theme:active, .btn-theme:focus{
+    background: var(--theme-hover-color);
+    color: var(--btn-color);
+}
+
+.btn-outline-theme{
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+}
+
+.btn-outline-success{
+    border: 1px solid #36CE9F;
+    color: #36CE9F;
+}
+
+.btn-outline-success:focus, .btn-outline-success:active, .btn-outline-success:hover{
+    background: #36CE9F;
+    color: var(--text-main);
+}
+
+.btn-outline-theme:focus, .btn-outline-theme:active, .btn-outline-theme:hover{
+    background: var(--theme-color);
+    color: var(--text-main);
+}
+
 .w-100{
     width: 100%;
 }
-
-
-
 
 .h-100{
     height: 100% !important;
@@ -290,6 +371,148 @@ input{
 
 .d-n-none{
     display: none;
+}
+
+
+.text-decoration-none{
+    text-decoration: none;
+}
+
+
+.text-size-1{
+    font-size: 1.5rem;
+}
+
+.pt-3{
+    padding-top: 2rem;
+}
+
+
+/*Custom Checkbox*/
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 20px;
+    width: 20px;
+
+    margin: 0;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #999999;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--theme-sc-dark);
+    border: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform:translate(-50%, -50%) rotate(45deg);
+    -ms-transform:translate(-50%, -50%) rotate(45deg);
+}
+
+
+.checkmark-wrapper{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #36CE9F;
+    text-align: center;
+    display: inline-block;
+    place-items: center;
+    position: relative;
+}
+
+
+.checkmark-wrapper i{
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+
+.grid-center{
+    display: grid;
+    place-items: center;
+}
+
+
+.d-grid{
+    display: grid;
+}
+
+h1:focus, h2:focus, h3:focus, h4:focus, h5:focus{
+    outline: none;
+}
+
+h1, h2{
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 992px){
+    .mt-md-1{
+        margin-top: 1.5rem;
+    }
 }
 
 @media all and (min-width: 568px){

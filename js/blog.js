@@ -1,7 +1,9 @@
+// Dom
 var comment = document.getElementById("comment");
 var commentBtn = document.getElementById("commentSubmit");
 var replies = document.getElementById("replies");
 
+// Create Comment
 function getComment(text){
     var comment = document.createElement("div");
     comment.classList.add("mt-3", "theme-content-bg", "content-box");
@@ -26,6 +28,7 @@ function getComment(text){
     return comment;
 }
 
+// Add Comment
 commentBtn.onclick = function (){
     if(comment.value !== ""){
         replies.insertBefore(getComment(comment.value), replies.childNodes[1])

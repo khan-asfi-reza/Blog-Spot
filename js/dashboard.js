@@ -1,20 +1,10 @@
-// State
-
-// var navbarSearch = false;
-
-// var searchBtn = document.getElementById("searchBarBtn");
-// var searchInput = document.getElementById("searchBarInput");
-
-// searchBtn.onclick = function(){
-//     searchInput.classList.toggle("input-close")
-// }
-
-
+// DOM
 var contentWriter = document.getElementById("contentWriter")
-
-
+var submitBtn = document.getElementById("publishBtn");
+var contentSection = document.getElementById("contentSection");
 var DEFAULT_TEXT = "What do you want to write?"
 
+// Change Content Writer State
 contentWriter.onfocus = function (){
     if (contentWriter.innerText === DEFAULT_TEXT){
         contentWriter.innerText = ""
@@ -27,6 +17,7 @@ contentWriter.onblur = function (){
      }
 }
 
+// Create New Content
 function getContent(text){
     var rootNode = document.createElement(
         "article",
@@ -60,13 +51,9 @@ function getContent(text){
     "                    </div>\n" +
     "                </div>\n"
     return rootNode
-
 }
 
-var submitBtn = document.getElementById("publishBtn");
-var contentSection = document.getElementById("contentSection");
-
-
+// Create Content
 submitBtn.onclick = function (){
     if(contentWriter.innerText !== DEFAULT_TEXT) {
         contentSection.insertBefore(getContent(contentWriter.innerText), contentSection.childNodes[2]);
